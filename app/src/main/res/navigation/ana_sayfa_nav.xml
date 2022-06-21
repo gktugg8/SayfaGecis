@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ana_sayfa_nav"
+    app:startDestination="@id/anaSayfaFragment">
+
+    <fragment
+        android:id="@+id/anaSayfaFragment"
+        android:name="com.example.sayfagecis.AnaSayfaFragment"
+        android:label="fragment_ana_sayfa"
+        tools:layout="@layout/fragment_ana_sayfa" >
+        <action
+            android:id="@+id/aSayfasinaGecis"
+            app:destination="@id/asayfasiFragment" />
+        <action
+            android:id="@+id/xSayfasinaGecis"
+            app:destination="@id/xsayfasiFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/asayfasiFragment"
+        android:name="com.example.sayfagecis.AsayfasiFragment"
+        android:label="fragment_asayfasi"
+        tools:layout="@layout/fragment_asayfasi" >
+        <action
+            android:id="@+id/bSayfasinaGecis"
+            app:destination="@id/bsayfasiFragment"
+            app:popUpTo="@id/asayfasiFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/bsayfasiFragment"
+        android:name="com.example.sayfagecis.BsayfasiFragment"
+        android:label="fragment_bsayfasi"
+        tools:layout="@layout/fragment_bsayfasi" >
+        <action
+            android:id="@+id/bDenYsayfasinaGecis"
+            app:destination="@id/ysayfasiFragment"
+            app:popUpTo="@id/bsayfasiFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/xsayfasiFragment"
+        android:name="com.example.sayfagecis.XsayfasiFragment"
+        android:label="fragment_xsayfasi"
+        tools:layout="@layout/fragment_xsayfasi" >
+        <action
+            android:id="@+id/ySayfasinaGecis"
+            app:destination="@id/ysayfasiFragment"
+            app:popUpTo="@id/xsayfasiFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/ysayfasiFragment"
+        android:name="com.example.sayfagecis.YsayfasiFragment"
+        android:label="fragment_ysayfasi"
+        tools:layout="@layout/fragment_ysayfasi" />
+</navigation>
